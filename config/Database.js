@@ -6,7 +6,7 @@ import mysql2 from 'mysql2';
 // new Sequelize(options)
 
 const db = new Sequelize('wads_fp','root','',{
-    // host:'https://odd-jobs-back-end.vercel.app/',
+    host:'localhost',
     dialect:'mysql'
 });
 
