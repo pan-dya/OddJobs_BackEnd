@@ -1,0 +1,75 @@
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsIm5hbWUiOiJKdXN0aW4iLCJlbWFpbCI6Ikp1c3RpbkBnbWFpbC5jb20iLCJpYXQiOjE2ODU4NjY4OTIsImV4cCI6MTY4NTg2NjkyMn0.ggmi2GDfOvJNErr774RdzRU3EwSaIlHG7iY-lL5feBE
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Justin",
+    "email": "Justin@gmail.com",
+    "password": "123456",
+    "confPassword": "123456" 
+}
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "Justin@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:5000/token
+
+###
+DELETE http://localhost:5000/logout
+
+###
+POST http://localhost:5000/address
+Content-Type: application/json
+
+{
+    "province": "West Java",
+    "city": "Depok",
+    "regency": "Pancoran Mas",
+    "details": "blablabalbalbalabla abl bal balabl ala",
+    "postal_code": 16356,
+    "userId": 2
+}
+
+###
+GET http://localhost:5000/address/1
+
+###
+PUT http://localhost:5000/address/2
+Content-Type: application/json
+
+{
+    "province": "West Java",
+    "city": "Depok",
+    "regency": "Pancoran Mas",
+    "details": "updated address",
+    "postal_code": 16356,
+    "userId": 2
+}
+
+###
+GET http://localhost:5000/services
+
+###
+POST http://localhost:5000/services
+Content-Type: application/json
+
+{
+    "gardening":"1",
+    "housework":"0",
+    "mental_support":"0",
+    "heavy_lifting":"0",
+    "delivery":"0",
+    "construction":"0",
+    "medical_support":"0",
+    "others":"0",
+    "details":"blablabalb vblbl ablabal alb alb alb lab lab labl blbalb lbalb alb al blab a",
+}
