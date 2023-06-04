@@ -1,5 +1,4 @@
-import { Sequelize } from "sequelize";
-import mysql2 from 'mysql2';
+const Sequelize = require('sequelize')
 // if (options.dialect === 'mysql') {
 //   options.dialectModule = mysql2;
 // }
