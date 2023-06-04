@@ -7,7 +7,7 @@ import mysql2 from 'mysql2';
 
 const db = new Sequelize(process.env.DATABASE, process.env.DB_USERNAME,{
     host: process.env.DB_HOST,
-    dialect: 'mysql',
+    dialect: process.env.DIALECT,
     port: process.env.DB_PORT
 });
 
