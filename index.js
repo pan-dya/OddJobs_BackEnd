@@ -18,7 +18,7 @@ try {
   console.error(error);
 }
 
-app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cors({ credentials: true, origin: "https://odd-jobs-front-end.vercel.app/" }));
 app.use(cookieParser());
 app.use(express.json());
 app.use(router);
