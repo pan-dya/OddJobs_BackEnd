@@ -19,6 +19,11 @@ try {
   console.error(error);
 }
 
+app.use((req, res, next) => {
+  res.setHeader('Set-Cookie', 'SameSite=None; Secure');
+  next();
+});
+
 app.use(
   cors({ credentials: true, origin: ["https://odd-jobs-front-n5tztzdim-pan-dya.vercel.app", 'https://odd-jobs-front-end.vercel.app', 'https://odd-jobs-front-7nw1glcrm-pan-dya.vercel.app', 'https://odd-jobs-front-9wa50pnph-pan-dya.vercel.app'] })
 );
