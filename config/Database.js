@@ -1,4 +1,5 @@
-const Sequelize = require('sequelize')
+// const Sequelize = require('sequelize')
+import { Sequelize } from "sequelize";
 // if (options.dialect === 'mysql') {
 //   options.dialectModule = mysql2;
 // }
