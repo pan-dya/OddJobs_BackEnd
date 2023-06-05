@@ -20,7 +20,7 @@ try {
 }
 
 app.use(
-  cors({ credentials: true, origin: "https://odd-jobs-front-o5264vy78-pan-dya.vercel.app/" })
+  cors({ credentials: true, origin: ["https://odd-jobs-front-n5tztzdim-pan-dya.vercel.app", 'https://odd-jobs-front-end.vercel.app'] })
 );
 app.use(cookieParser());
 app.use(express.json());
