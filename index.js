@@ -7,6 +7,7 @@ import Users from "./models/UserModel.js";
 import router from "./routes/index.js";
 import Address from "./models/AddressModel.js";
 import { Sequelize } from "sequelize";
+import { refreshToken } from "./controller/RefreshToken.js";
 dotenv.config();
 const app = express();
 
@@ -29,6 +30,16 @@ app.use(
 );
 app.use(cookieParser());
 app.use(express.json());
+
+// app.use((req, res, next) => {
+//   res.cookie('refreshToken',{ refreshToken }, {
+//     httpOnly: true,
+//     secure: true,
+//     sameSite: 'None'
+//   });
+//   next();
+// });
+
 app.use(router);
 
 app.listen(process.env.HOST || HOST, () =>
