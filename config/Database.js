@@ -5,7 +5,7 @@ import { Sequelize } from "sequelize";
 // }
 // new Sequelize(options)
 
-const db = new Sequelize("wads_fp", process.env.DB_USER, process.env.DB_PASSWORD,{
+const db = new Sequelize(process.env.DATABASE, process.env.DB_USER, process.env.DB_PASSWORD,{
     host: process.env.DB_HOST,
     dialect: "mysql",
     port: process.env.DB_PORT
