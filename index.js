@@ -31,14 +31,13 @@ app.use(
 app.use(cookieParser());
 app.use(express.json());
 
-// app.use((req, res, next) => {
-//   res.cookie('refreshToken',{ refreshToken }, {
-//     httpOnly: true,
-//     secure: true,
-//     sameSite: 'None'
-//   });
-//   next();
-// });
+app.use((req, res, next) => {
+  const refreshToken = req.cookies.refreshToken;
+  if (refreshToken) {
+    res.locals.refreshToken = refreshToken;
+  }
+  next();
+});
 
 app.use(router);
 
