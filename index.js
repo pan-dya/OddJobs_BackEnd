@@ -21,7 +21,7 @@ try {
 }
 
 app.use(
-  cors({ credentials: true, origin: ["https://odd-jobs-front-n5tztzdim-pan-dya.vercel.app", 'https://odd-jobs-front-end.vercel.app', 'https://odd-jobs-front-7nw1glcrm-pan-dya.vercel.app', 'https://odd-jobs-front-9wa50pnph-pan-dya.vercel.app'] })
+  cors({ credentials: true, origin: ["https://odd-jobs-front-n5tztzdim-pan-dya.vercel.app", 'https://odd-jobs-front-end.vercel.app', 'https://odd-jobs-front-7nw1glcrm-pan-dya.vercel.app', 'https://odd-jobs-front-9wa50pnph-pan-dya.vercel.app', 'https://odd-jobs-front-h3mykeds9-pan-dya.vercel.app'] })
 );
 app.use(cookieParser());
 app.use(express.json());
@@ -34,10 +34,10 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
 
 app.use(router);
 
