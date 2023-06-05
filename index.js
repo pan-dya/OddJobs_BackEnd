@@ -11,7 +11,8 @@ dotenv.config();
 const app = express();
 
 try {
-  await db.authenticate();
+  await db.authenticate;
+  // db.query(`CREATE DATABASE IF NOT EXIST wads_fp`)
   console.log("Database Connected...");
   await db.sync({ alter: true });
 } catch (error) {
